@@ -10,10 +10,10 @@ all: $(PNGS)
 	dot -Tsvg $^ -o $@
 
 %.png: %.dot
-	dot -Tpng -Gsize=3,15\! -Gdpi=100 $^ -o $@
+	dot -Tpng -Gsize=6,40\! -Gdpi=100 $^ -o $@
 
 %.jpg: %.dot
-	dot -Tjpg -Gsize=3,15\! -Gdpi=100 $^ -o $@
+	dot -Tjpg -Gsize=6,40\! -Gdpi=100 $^ -o $@
 
 clean:
 	rm -f $(SVGS) $(PNGS) $(JPGS)
