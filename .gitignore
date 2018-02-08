@@ -1,0 +1,11 @@
+
+# Temporary
+.*.swp
+
+# Eclipse
+.project
+.cproject
+.pydevproject
+.settings
+.metadata
+
