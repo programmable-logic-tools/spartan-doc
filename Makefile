@@ -3,7 +3,7 @@ DOTS = $(wildcard *.dot)
 SVGS = $(DOTS:.dot=.svg)
 PNGS = $(DOTS:.dot=.png)
 
-all: $(SVGS)
+all: $(SVGS) $(PNGS)
 
 %.svg: %.dot
 	dot -Tsvg $^ > $@

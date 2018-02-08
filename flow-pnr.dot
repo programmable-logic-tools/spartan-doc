@@ -1,0 +1,9 @@
+digraph
+{
+	node[shape=box];
+	pad=0.1;
+	
+	Netlist
+		-> Floorplan
+		[label=" Layout optimization\l via\l simulated annealing\l"];
+}

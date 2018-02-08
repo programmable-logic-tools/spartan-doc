@@ -1,0 +1,14 @@
+digraph
+{
+	node[shape=box];
+	pad=0.1;
+	
+	"Verilog source code"
+		-> "Digital logic blocks"
+		[label=" HDL compiler"];
+	"Digital logic blocks"
+		-> "Logic primitives"
+		[label=" Mapping:\l Inferrence of device-specific primitives\l by mapping logical blocks\l to the FPGA's technology library\l"];
+	"Logic primitives"
+		-> Netlist;
+}

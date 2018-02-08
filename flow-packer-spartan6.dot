@@ -1,0 +1,15 @@
+digraph
+{
+	node[shape=box];
+	pad=0.1;
+	
+	Floorplan
+		-> "Bitstream programming language"
+		[label=" fp2bpl"];
+	"Bitstream programming language"
+		-> Bitstream
+		[label=" bpl2bin"];
+	Bitstream
+		-> "Xilinx bitfile"
+		[label=" bin2bit (optional)"];
+}
