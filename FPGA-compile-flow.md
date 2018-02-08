@@ -4,14 +4,18 @@ how it could be realised for the Xilinx Spartan-6 toolchain.
 
 ## Synthesis
 
-Synthesis in general compiles a **hardware description** language
-to a netlist of **logic primitives**,
+Synthesis is the process of
+compiling source files
+written in a **hardware description language** (HDL),
+e.g. Verilog or VHDL,
+to a netlist of digital logic building blocks,
 e.g. LUTs and D-Flipflops,
-and proceeds by **mapping** those primitives to device-specific primitives,
+and the subsequent **mapping** of those blocks to device-specific **primitives**,
 e.g. SB_LUT4 for iCE40 FPGAs.
 Amongst other things,
 YoSys is capable of compiling Verilog
-to most of the primitives that are available in Lattice iCE40-FPGAs (2018-02).
+to most of the primitives that are available in Lattice iCE40-FPGAs
+(as of 2018-02).
 The output of the synthesis is the netlist
 containing a list of FPGA tiles with (abstract) configuration
 alongside information about how to interconnect the inputs and outputs of those tiles.
@@ -39,9 +43,9 @@ for all 16 possible combinations of input signal values (2^4).
 The outputs of a primitive are input to one or several others.
 The idea is, that the totality of interconnected primitives
 realizes the desired logical flow.
-The Tile interconnections are also called nets.
+The tile interconnections are also called nets.
 Nets can only represent one signal
-and thus only have one logical/electrical value at a time,
+and thus only have one logical value i.e. voltage at a time,
 but they can connect two or more inputs with one output,
 thereby establishing a network involving multiple primitives.
 Nets are identified by their name.
@@ -68,9 +72,9 @@ The final floorplan contains explicit configuration information
 about all tiles
 present on an FPGA.
 This information can be abstract (as in the netlist above)
-or binary,
-with the abstract tile configuration already transpiled to a stream of bits,
-as the FPGA will receive it.
+or binary.
+In the latter the abstract tile configuration
+is already transpiled to a stream of bits.
 
 <a href="https://raw.githubusercontent.com/wiki/matthiasbock/spartantools/flow-pnr.png">
 <img width="300px" type="image/svg+xml" src="https://raw.githubusercontent.com/wiki/matthiasbock/spartantools/flow-pnr.png"/>
@@ -142,7 +146,7 @@ Those memory ICs are usually connected via a serial bus (SPI).
 
 Although this sounds like a simple task,
 it is a major bottleneck in (Open Source) toolchain development,
-because the corresponding companies (Xilinx, Altera, Lattice, ...)
+because - unfortunately - the corresponding companies (Xilinx, Altera, Lattice, ...)
 provide little to no documentation about how to format bitstreams for their FPGAs.
 Therefore toolchain development must often rely on reverse-engineering.
 
