@@ -115,6 +115,13 @@ and configures itself from the contained binary,
 which is mostly referred to as the **bitstream**.
 Those memory ICs are usually connected via a serial bus (SPI).
 
+Although this sounds like a simple task,
+it is a major bottleneck in (Open Source) toolchain development,
+because the corresponding companies (Xilinx, Altera, Lattice, ...)
+provide little to no documentation about the format of their bitstreams.
+Therefore toolchain development must -unfortunately-
+rely on reverse-engineering.
+
 The **iCEstorm project** provides the tool **icepack**,
 which facilitates the conversion
 from the ASCII representation of the floorplan
