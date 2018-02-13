@@ -1,3 +1,5 @@
+## Bitstream
+
 When talking about a "bitstream" for a Spartan-6 FPGA,
 one must specify, whether one is talking about:
 * a Xilinx bitfile,
@@ -32,12 +34,24 @@ The Spartan6 series features the following tile types:
 
 ## Configuration memory frames
 
-Each tile on a Spartan6-series FPGA features
-one dedicated configuration memory frame,
-that configures the function of the tile.
-Most frames consist of 65x 16-bit words = 1040 bits (TODO: list of tile types with frame sizes).
+Each tile on a Spartan6-series FPGA is associated
+dedicated configuration memory, called "frame",
+that configures the function of that tile.
+Most frames consist of 65x 16-bit words = 1040 bits (TODO: Create list of tile types with frame sizes).
 The meaning of each individual bit in a frame
 depends on the tile type.
+
+## Configuration command sequence
+
+Spartan6-series FPGAs are configured using 16-bit commands,
+which act on the FPGA's internal registers.
+A stream of bits representing a list of such configuration commands (the "bitstream")
+is serially shifted into the FPGA upon startup.
+The FPGA's internal "processor" evaluates the commands and performs
+the programmed register reads and writes.
+Amongst other things,
+those commands program the desired configuration frames
+into the configuration memory.
 
 ## Xilinx bitfile
 
