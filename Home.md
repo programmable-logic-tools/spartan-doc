@@ -7,12 +7,13 @@ for the compilation of Verilog to bitstreams for Spartan-6 FPGAs.
 
 A lot of work has already been done by Wolfgang Spraul.
 The aim is to start with his work and integrate it with
-the existing FPGA toolchain for Lattice iCE40 FPGAs (YoSys+Arachne-PnR+iCEstorm).
+existing FPGA tools,
+like the one for Lattice iCE40 FPGAs (YoSys+Arachne-PnR+iCEstorm)
+or VPR.
 
 # Chapters
 
-* [[FPGA compile flow]]
-* [[Hardware]]
+Please see the menu on the right side of this page.
 
 # Links
 * Details about Spartan-6 bitstreams: https://vjordan.info/log/fpga/bitstream-analysis-code.html#id7
