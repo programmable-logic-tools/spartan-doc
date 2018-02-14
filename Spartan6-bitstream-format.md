@@ -58,5 +58,11 @@ into the configuration memory.
 The output of Xilinx ISE is usually a bitfile (*.bit).
 Additionally to the configuration command sequence
 it contains meta-information,
-such as  the compiler revision
+such as the compiler revision
 and the date and time of file creation.
+This meta-information is not uploaded to the FPGA,
+therefore a Xilinx bitfile is not required for the configuration of a
+Spartan6 FPGA - having the configuration command sequence
+in binary form (a.k.a. the bitstream) is sufficient.
+However, for archiving and versioning purposes it might prove useful
+to have the actual bitstreams bundled with their corresponding meta-information.
