@@ -35,12 +35,19 @@ The Spartan6 series features the following tile types:
 ## Configuration memory frames
 
 Each tile on a Spartan6-series FPGA is associated
-dedicated configuration memory, called "frame",
+dedicated configuration memory,
 that configures the function of that tile.
-Most frames consist of 65x 16-bit words = 1040 bits [[UG380 v2.10, p.97]](http://www.xilinx.com/support/documentation/user_guides/ug380.pdf)
-(TODO: Create list of tile types with frame sizes).
-The meaning of each individual bit in a frame
-depends on the tile type.
+The configuration memory consists of frames,
+which can only be erased and written as a whole.
+
+Most frames consist of 65x 16-bit words [[UG380 v2.10, p.97]](http://www.xilinx.com/support/documentation/user_guides/ug380.pdf).
+
+The size of a frame is always 130 Byte and carries mainly
+the configuration for the primitives (e.g., 8 bytes per CLB) [[Koch et al. Demonstration Paper]](https://www.duo.uio.no/bitstream/handle/10852/8851/fpt10koch_demo.pdf).
+
+* CLB: 31 frames
+* DSP48: 23 frames
+* BRAM: 24 frames
 
 ## Configuration command sequence
 
