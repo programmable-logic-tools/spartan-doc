@@ -37,7 +37,8 @@ The Spartan6 series features the following tile types:
 Each tile on a Spartan6-series FPGA is associated
 dedicated configuration memory, called "frame",
 that configures the function of that tile.
-Most frames consist of 65x 16-bit words = 1040 bits (TODO: Create list of tile types with frame sizes).
+Most frames consist of 65x 16-bit words = 1040 bits [[UG380 v2.10, p.97]](http://www.xilinx.com/support/documentation/user_guides/ug380.pdf)
+(TODO: Create list of tile types with frame sizes).
 The meaning of each individual bit in a frame
 depends on the tile type.
 
