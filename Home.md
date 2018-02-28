@@ -19,3 +19,4 @@ Please see the menu on the right side of this page.
 * https://vjordan.info/log/fpga/bitstream-analysis-code.html
 * https://vjordan.info/log/fpga/matching-the-xilinx-bitstream-with-the-spartan-6-silicium-die.html
 * https://vjordan.info/log/fpga/xc6slx9-die-layout-and-bitstream.html
+* https://vjordan.info/log/fpga/spartan-6-routing-internals.html
