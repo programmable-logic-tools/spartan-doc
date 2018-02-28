@@ -12,7 +12,8 @@ like the one for Lattice iCE40 FPGAs (YoSys+Arachne-PnR+iCEstorm),
 VPR,
 OpenPR,
 qFlow,
-tFlow
+tFlow,
+RapidSmith
 and/or
 TORC.
 
